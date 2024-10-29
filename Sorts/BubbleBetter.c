@@ -7,19 +7,21 @@ void swap(int *left, int *right) {
     *right = temp;
 }
 
-void bubbleSort(int arr[], int n) {
+// https://www.geeksforgeeks.org/bubble-sort-algorithm/
+
+void bubbleBetter(int *array, int n) {
     int i, j;
     bool swapped;
 
     for (i = 0; i < (n - 1); i++)
     {
         swapped = false;
-        
+
         for (j = 0; j < (n - i - 1); j++)
         {
-            if (arr[j] > arr[j + 1])
+            if (array[j] > array[j + 1])
             {
-                swap(&arr[j], &arr[j + 1]);
+                swap(&array[j], &array[j + 1]);
                 swapped = true;
             }
         }

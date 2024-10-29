@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//https://www.geeksforgeeks.org/merge-sort/
+// https://www.geeksforgeeks.org/merge-sort/
 
 void merge(int *array, int first, int middle, int last) {
     int i, j, k;

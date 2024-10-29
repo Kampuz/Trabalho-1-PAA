@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-void swap(int *left, int *right) {
-    int temp = *left;
-    *left = *right;
-    *right = temp;
-}
+// https://www.geeksforgeeks.org/heap-sort/
 
 void heapify(int *array, int n, int index) {
     int largest = index;

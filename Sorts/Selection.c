@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-//https://www.geeksforgeeks.org/selection-sort-algorithm-2/
-
-void swap(int *left, int *right) {
-    int temp = *left;
-    *left = *right;
-    *right = temp;
-}
+// https://www.geeksforgeeks.org/selection-sort-algorithm-2/
 
 void selectionSort(int *array, int n) {
     for (int i = 0; i < (n - 1); i++)
@@ -17,6 +11,7 @@ void selectionSort(int *array, int n) {
             if (array[j] < array[min_index])
                 min_index = j;
         
-        swap(&array[i], &array[min_index]);
+        if (min_index != i)
+            swap(&array[i], &array[min_index]);
     }
 }

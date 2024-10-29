@@ -6,11 +6,13 @@ void swap(int *left, int *right) {
     *right = temp;
 }
 
-void bubbleSort(int arr[], int n) {
+// Downgrad of the Bubble Better.
+
+void bubbleSimple(int *array, int n) {
     int i, j;
 
     for (i = 0; i < (n - 1); i++)
         for (j = 0; j < (n - i - 1); j++)
-            if (arr[j] > arr[j + 1])
-                swap(&arr[j], &arr[j + 1]);
+            if (array[j] > array[j + 1])
+                swap(&array[j], &array[j + 1]);
 }

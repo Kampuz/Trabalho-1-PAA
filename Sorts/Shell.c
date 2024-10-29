@@ -1,4 +1,4 @@
-
+// https://www.geeksforgeeks.org/shell-sort/
 
 void shellSort(int *array, int n) {
     for (int gap = (n / 2); gap > 0; gap /= 2)
