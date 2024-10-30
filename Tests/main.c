@@ -40,16 +40,9 @@ int main() {
 
     int startIndex = (int)(num *0.05);
     int endIndex = (int)(num*0.95);
-    int mid = (endIndex - startIndex) / 2;
 
-    for (int k = startIndex; k < endIndex ; k++)
-        average += time[k];
-    average /= (endIndex - startIndex);
-
-    if (((endIndex - startIndex) % 2) == 0)
-        median = ((time[startIndex + mid - 1] + time[startIndex + mid]) / 2);
-    else
-        median = time[startIndex + mid];
+    average = getAvarege(startIndex, endIndex, time);
+    median = getMedian(startIndex, endIndex, time);
 
     printf("Teste feito %d vezes, utilizando um array de %d elementos desordenados.\n", num, n);
     printf("Average time: %.6f seconds\n", average);
