@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "auxiliar.h"
+
+#include "../Lib/auxiliar.h"
 
 int main() {
     int n = 5000;

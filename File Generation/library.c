@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "library.h"
+#include "../Lib/library.h"
 
 
 void writeArrayToFile(int *array, int n, char *filename) {

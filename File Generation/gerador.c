@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "library.h"
+#include "../Lib/library.h"
 
 int main() {
     int one = 1000, five = 5000, ten = 10000, twenty = 20000, fifty = 50000, hundred = 100000;
