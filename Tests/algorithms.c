@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "auxiliar.h"
+#include "../Lib/auxiliar.h"
 
 void swap(int *left, int *right) {
     int temp = *left;
@@ -37,7 +37,7 @@ void bubbleBetter(int array[], int n) {
 }
 
 // Downgrad of the Bubble Better.
-void bubbleSimple(double array[], int n) {
+void bubbleWorse(double array[], int n) {
     int i, j;
 
     for (i = 0; i < (n - 1); i++)

@@ -1,1 +1,0 @@
-gcc main.c Aid/library.c Aid/library.h Aid/sorts.h sorts.c sorts.h -o main

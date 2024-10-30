@@ -1,0 +1,23 @@
+.vscode -> contém configurações do VSCODE;
+
+Algorithms -> contém os algoritmos de ordenação utilizados no trabalho;
+
+Arrays -> contém os arrays que foram utilizados na análise
+    inverse -> contém os arrays com elementos em ordem decrescente (n...1);
+    natural -> contém os arrays com elementos em ordem crescente (1...n);
+    random -> contém os arrays com elementos em ordem aleatória;
+
+Array Generation -> contém os arquivos utilizados para gerarem os arrays
+    generator.c -> arquivo que cria os arrays;
+    leitor.c -> arquivo que permite imprimir o conteudo de um array (utilizado para revisão do array gerado);
+    library.c -> arquivo que contém as funções utilizadas por generator.c e leitor.c;
+    library.h -> biblioteca gerada para o gerador.c e library.c pudessem utilizar das funções contidas em library.c
+
+Docs -> contém a documentação do código, trabalho e as instruções do trabalho;
+
+Lib -> contém a bibliteca (auxiliar.h) criada para os testes (contém os algoritmos e funções auxiliares);
+
+Tests -> contem os arquivos necessários para rodar os teste;
+    main.c -> arquivo utilizado para fazer os testes;
+    algorithms.c -> arquivo que contém todos os algorithms (criado para facilitar a compilação);
+    functions.c -> arquivo que contém as funções auxiliares necessárias para os testes;

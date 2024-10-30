@@ -3,11 +3,13 @@
 
 int *getArray(int n, char *filePath);
 void printArray(int array[], int n);
+double getAvarege(int firstIndex, int lastIndex, int array[]);
+double getMedian(int firstIndex, int lastIndex, int array[]);
 
 // https://www.geeksforgeeks.org/bubble-sort-algorithm/
 void bubbleBetter(int array[], int n);
 // Downgrad of the Bubble Better.
-void bubbleSimple(double array[], int n);
+void bubbleWorse(double array[], int n);
 
 // https://www.geeksforgeeks.org/heap-sort/
 void heapSort(int array[], int n);
