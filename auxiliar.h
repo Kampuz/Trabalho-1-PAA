@@ -1,5 +1,8 @@
-#ifndef SORTS_
-#define SORTS_
+#ifndef AUXILIAR_
+#define AUXILIAR_
+
+int *getArray(int n, char *filePath);
+void printArray(int *array, int n);
 
 // https://www.geeksforgeeks.org/bubble-sort-algorithm/
 void bubbleBetter(int *array, int n);

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "sorts.h"
+#include "auxiliar.h"
 
 void swap(int *left, int *right) {
     int temp = *left;
@@ -10,7 +10,7 @@ void swap(int *left, int *right) {
 }
 
 // https://www.geeksforgeeks.org/bubble-sort-algorithm/
-void bubbleBetter(int *array, int n) {
+void bubbleBetter(int array[], int n) {
     int i, j;
     bool swapped;
 
@@ -31,7 +31,7 @@ void bubbleBetter(int *array, int n) {
 }
 
 // Downgrad of the Bubble Better.
-void bubbleSimple(int *array, int n) {
+void bubbleSimple(int array[], int n) {
     int i, j;
 
     for (i = 0; i < (n - 1); i++)
@@ -41,7 +41,7 @@ void bubbleSimple(int *array, int n) {
 }
 
 // https://www.geeksforgeeks.org/heap-sort/
-void heapify(int *array, int n, int index) {
+void heapify(int array[], int n, int index) {
     int largest = index;
     int left = (2 * index + 1);
     int right = (2 * index + 2);
@@ -59,7 +59,7 @@ void heapify(int *array, int n, int index) {
     }
 }
 
-void heapSort(int *array, int n) {
+void heapSort(int array[], int n) {
     for (int i = (n / 2 - 1); i >= 0; i--)
         heapify(array, n, i);
 
@@ -71,7 +71,7 @@ void heapSort(int *array, int n) {
 }
 
 // https://www.geeksforgeeks.org/insertion-sort-algorithm/
-void insertionSort(int *array, int n) {
+void insertionSort(int array[], int n) {
     for (int i = 1; i < n; ++i)
     {
         int key = array[i];
@@ -88,7 +88,7 @@ void insertionSort(int *array, int n) {
 }
 
 // https://www.geeksforgeeks.org/merge-sort/
-void merge(int *array, int first, int middle, int last) {
+void merge(int array[], int first, int middle, int last) {
     int i, j, k;
     int n1 = middle - first + 1;
     int n2 = last - middle;
@@ -130,7 +130,7 @@ void merge(int *array, int first, int middle, int last) {
     }
 }
 
-void mergeSort(int *array, int first, int last) {
+void mergeSort(int array[], int first, int last) {
     if (first < last) {
         int middle = first + (last - first) / 2;
 
@@ -142,7 +142,7 @@ void mergeSort(int *array, int first, int last) {
 }
 
 // https://www.geeksforgeeks.org/selection-sort-algorithm-2/
-void selectionSort(int *array, int n) {
+void selectionSort(int array[], int n) {
     for (int i = 0; i < (n - 1); i++)
     {
         int min_index = i;
@@ -157,7 +157,7 @@ void selectionSort(int *array, int n) {
 }
 
 // https://www.geeksforgeeks.org/shell-sort/
-void shellSort(int *array, int n) {
+void shellSort(int array[], int n) {
     for (int gap = (n / 2); gap > 0; gap /= 2)
         for (int i = gap; i < n; i += 1)
         {
