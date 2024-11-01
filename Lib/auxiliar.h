@@ -33,4 +33,14 @@ void selectionSort(int array[], int n);
 // https://www.geeksforgeeks.org/shell-sort/
 void shellSort(int array[], int n);
 
+int partitionLow(int array[], int low, int high);
+void quickSortLow(int array[], int low, int high);
+
+
+int partitionMid(int array[], int low, int high);
+void quickSortMid(int array[], int low, int high);
+
+void fachadaQuickMid(int array[], int size);
+void fachadaQuickLow(int array[], int size);
+
 #endif

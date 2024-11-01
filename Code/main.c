@@ -11,10 +11,10 @@ int main() {
 
 
     type = 3;
-    size = 1000;
+    size = 20000;
     tests = 100;
-    input = "../Arrays/random/1000.bin";
-    output = "1000.txt";
+    input = "../Arrays/random/20000.bin";
+    output = "../Tests/20000.txt";
 
     test(type, size, tests, input, output, &bubbleBetter, "Bubble Sort Melhorado");
     printf("\n\n");
@@ -24,11 +24,11 @@ int main() {
     printf("\n\n");
     test(type, size, tests, input, output, &insertionSort, "Insertion Sort");
     printf("\n\n");
-    test(type, size, tests, input, output, &mergeSort, "Merge Sort");
+    test(type, size, tests, input, output, &fachada, "Merge Sort");
     printf("\n\n");
-    test(type, size, tests, input, output, &, "Quick Sort (inicio)");
+    test(type, size, tests, input, output, &fachadaQuickLow, "Quick Sort (inicio)");
     printf("\n\n");
-    test(type, size, tests, input, output, &, "Quick Sort (meio)");
+    test(type, size, tests, input, output, &fachadaQuickMid, "Quick Sort (meio)");
     printf("\n\n");
     test(type, size, tests, input, output, &selectionSort, "Selection Sort");
     printf("\n\n");
