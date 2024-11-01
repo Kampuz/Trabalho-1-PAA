@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "../Lib/auxiliar.h"
+
+int compare(const void *a, const void* b) {
+    return (*(double*)a - *(double*)b);
+}
 
 int *getArray(int n, char *filePath) {
     FILE *file = fopen(filePath, "rb");
     if (file == NULL)
     {
-        fprintf(stderr, "Nao foi possivel abrir o arquivo\n");
+        perror("Error opening file to read.\n");
         return NULL;
     }
 
@@ -33,7 +38,7 @@ void printArray(int array[], int n) {
     printf("\n");
 }
 
-double getAvarege(int firstIndex, int lastIndex, int array[]) {
+double getAvarege(int firstIndex, int lastIndex, double array[]) {
     double avarage = 0.0;
 
     for (int i = firstIndex; i < lastIndex; i++)
@@ -45,7 +50,7 @@ double getAvarege(int firstIndex, int lastIndex, int array[]) {
     return avarage;
 }
 
-double getMedian(int firstIndex, int lastIndex, int array[]) {
+double getMedian(int firstIndex, int lastIndex, double array[]) {
     int middleIndex = (lastIndex - firstIndex) / 2;
     double median = 0.0;
 
@@ -55,4 +60,80 @@ double getMedian(int firstIndex, int lastIndex, int array[]) {
         median = array[firstIndex + middleIndex];
 
     return median;
+}
+
+void printToFile(double average, double median, int size, int tests, int type, char *functionName, char *filepath) {
+    FILE *file = fopen(filepath, "a");
+    if (file == NULL)
+    {
+        perror("Error opening file to print.\n");
+        return;
+    }
+
+    fprintf(file, "Função utilizada: %s\n", functionName);
+
+    switch (type)
+    {
+    case 1:
+        fprintf(file, "Teste feito %d vezes, utilizando um array de %d elementos ordenados (1...n).\n", tests, size);
+        break;
+    case 2:
+        fprintf(file, "Teste feito %d vezes, utilizando um array de %d elementos ordenados inversamente (n...1).\n", tests, size);
+        break;
+    case 3:
+        fprintf(file, "Teste feito %d vezes, utilizando um array de %d elementos desordenados.\n", tests, size);
+        break;
+    default:
+        fprintf(file, "ERRO");
+        break;
+    }
+
+    fprintf(file, "Avarage time: %.6f seconds\n", average);
+    fprintf(file, "Median time: %.6f seconds\n\n\n", median);
+
+    fclose(file);
+}
+
+void test(int type, int size, int tests, char *filename, char *filepath, void (*ptr)(int array[], int size), char *functionName) {
+    double times[tests];
+
+    double average = 0.0, median = 0.0;
+
+    int *array = getArray(size, filename);
+
+    for (int i = 0; i < tests; i++)
+    {
+        int *newArray = malloc(size * sizeof(int));
+        if (newArray == NULL)
+        {
+            perror("Failed to allocate memory for newArray.\n");
+            free(array);
+            return;
+        }
+
+        for (int j = 0; j < size; j++)
+            newArray[j] = array[j];
+
+        clock_t start = clock();
+        (*ptr)(newArray, size);
+        clock_t end = clock();
+
+        times[i] = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+        printf("%.6f ", times[i]);
+        free(newArray);
+    }
+
+    qsort(times, tests, sizeof(double), compare);
+
+    int startIndex = 0;
+    int endIndex = tests;
+
+    average = getAvarege(startIndex, endIndex, times);
+    median = getMedian(startIndex, endIndex, times);
+
+    printToFile(average, median, size, tests, type, functionName, filepath);
+
+    free(array);
+    return;
 }

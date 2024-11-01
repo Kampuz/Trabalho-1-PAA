@@ -1,0 +1,88 @@
+Teste feito 100 vezes, utilizando um array de 1000 elementos ordenados (1...n).
+Avarage time: 0.000004 seconds
+Median time: 0.000004 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001556 seconds
+Median time: 0.001556 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001581 seconds
+Median time: 0.001581 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000011 seconds
+Median time: 0.000011 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000025 seconds
+Median time: 0.000025 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001648 seconds
+Median time: 0.001731 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000103 seconds
+Median time: 0.000102 seconds
+
+
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001754 seconds
+Median time: 0.001565 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000110 seconds
+Median time: 0.000085 seconds
+
+
+Função utilizada: Bubble Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001646 seconds
+Median time: 0.001579 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 5000 elementos desordenados.
+Avarage time: 0.000319 seconds
+Median time: 0.000331 seconds
+
+
+Função utilizada: Bubble Sort
+Teste feito 100 vezes, utilizando um array de 5000 elementos desordenados.
+Avarage time: 0.038515 seconds
+Median time: 0.038590 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000094 seconds
+Median time: 0.000102 seconds
+
+
+Função utilizada: Bubble Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001639 seconds
+Median time: 0.001629 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.000095 seconds
+Median time: 0.000063 seconds
+
+
+Função utilizada: Bubble Sort
+Teste feito 100 vezes, utilizando um array de 1000 elementos desordenados.
+Avarage time: 0.001685 seconds
+Median time: 0.001951 seconds
+
+

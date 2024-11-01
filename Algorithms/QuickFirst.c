@@ -4,7 +4,7 @@ void swap(int *left, int *right) {
     *right = temp;
 }
 
-int partition(int array[], int low, int high) {
+int partitionLow(int array[], int low, int high) {
 
     int pivot = array[low];
     int i = low;
@@ -24,10 +24,10 @@ int partition(int array[], int low, int high) {
     return j;
 }
 
-void quickSort(int array[], int low, int high) {
+void quickSortLo(int array[], int low, int high) {
     if (low < high)
     {
-        int pivot = partition(array, low, high);
+        int pivot = partitionLow(array, low, high);
 
         quickSort(array, low, (pivot - 1));
         quickSort(array, (pivot + 1), high);

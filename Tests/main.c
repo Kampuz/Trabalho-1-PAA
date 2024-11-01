@@ -5,49 +5,32 @@
 #include "../Lib/auxiliar.h"
 
 int main() {
-    int n = 5000;
-    int num = 100;
     
-    double time[num];
-    
-    double average = 0.0;
-    double median = 0.0;
+    int type = 0,size = 0, tests = 0;
+    char *input = "", *output = "";
 
-    char *filename = "Arrays/random/5000.bin";
-    int *array = getArray(n, filename);
 
-    for (int i = 0; i < num; i++) {
-        int *newArray = malloc(n * sizeof(int));
-        if (newArray == NULL) {
-            perror("Failed to allocate memory for sortedArray");
-            free(array);
-            return 1;
-        }
+    type = 3;
+    size = 1000;
+    tests = 100;
+    input = "../Arrays/random/1000.bin";
+    output = "1000.txt";
 
-        for (int j = 0; j < n; j++) {
-            newArray[j] = array[j];
-        }
-
-        clock_t start = clock();
-        bubbleBetter(newArray, n);
-        clock_t end = clock();
-
-        time[i] = ((double)(end - start)) / CLOCKS_PER_SEC;
-        free(newArray);
-    }
-
-    bubbleSimple(time, num);
-
-    int startIndex = (int)(num *0.05);
-    int endIndex = (int)(num*0.95);
-
-    average = getAvarege(startIndex, endIndex, time);
-    median = getMedian(startIndex, endIndex, time);
-
-    printf("Teste feito %d vezes, utilizando um array de %d elementos desordenados.\n", num, n);
-    printf("Average time: %.6f seconds\n", average);
-    printf("Median  time: %.6f seconds\n", median);
-
-    free(array);
-    return 0;
+    test(type, size, tests, input, output, &bubbleBetter, "Bubble Sort Melhorado");
+    printf("\n\n");
+    test(type, size, tests, input, output, &bubbleWorse, "Bubble Sort Normal");
+    printf("\n\n");
+    test(type, size, tests, input, output, &heapSort, "Heap Sort");
+    printf("\n\n");
+    test(type, size, tests, input, output, &insertionSort, "Insertion Sort");
+    printf("\n\n");
+    test(type, size, tests, input, output, &mergeSort, "Merge Sort");
+    printf("\n\n");
+    test(type, size, tests, input, output, &, "Quick Sort (inicio)");
+    printf("\n\n");
+    test(type, size, tests, input, output, &, "Quick Sort (meio)");
+    printf("\n\n");
+    test(type, size, tests, input, output, &selectionSort, "Selection Sort");
+    printf("\n\n");
+    test(type, size, tests, input, output, &shellSort, "Shell Sort");
 }

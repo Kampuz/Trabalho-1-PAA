@@ -9,12 +9,6 @@ void swap(int *left, int *right) {
     *right = temp;
 }
 
-void swapDouble(double *left, double *right) {
-    double temp = *left;
-    *left = *right;
-    *right = temp;
-}
-
 // https://www.geeksforgeeks.org/bubble-sort-algorithm/
 void bubbleBetter(int array[], int n) {
     int i, j;
@@ -37,13 +31,13 @@ void bubbleBetter(int array[], int n) {
 }
 
 // Downgrad of the Bubble Better.
-void bubbleWorse(double array[], int n) {
+void bubbleWorse(int array[], int n) {
     int i, j;
 
     for (i = 0; i < (n - 1); i++)
         for (j = 0; j < (n - i - 1); j++)
             if (array[j] > array[j + 1])
-                swapDouble(&array[j], &array[j + 1]);
+                swap(&array[j], &array[j + 1]);
 }
 
 // https://www.geeksforgeeks.org/heap-sort/
@@ -145,6 +139,10 @@ void mergeSort(int array[], int first, int last) {
 
         merge(array, first, middle, last);
     }
+}
+
+void fachada(int array[], int size) {
+    mergeSort(array, 0, (size - 1));
 }
 
 // https://www.geeksforgeeks.org/selection-sort-algorithm-2/
