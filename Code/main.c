@@ -6,31 +6,74 @@
 
 int main() {
     
-    int type = 0,size = 0, tests = 0;
+    int type = 0,size = 0, tests = 100;
     char *input = "", *output = "";
 
+    type = 2;
+    size = 5;
+    input = "../Arrays/inverse/5.bin";
+    output = "../Tests/inverse/5.txt";
 
-    type = 3;
+    every(type, size, tests, input, output);
+
+    size = 10;
+    input = "../Arrays/inverse/10.bin";
+    output = "../Tests/inverse/10.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 20;
+    input = "../Arrays/inverse/20.bin";
+    output = "../Tests/inverse/20.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 50;
+    input = "../Arrays/inverse/50.bin";
+    output = "../Tests/inverse/50.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 100;
+    input = "../Arrays/inverse/100.bin";
+    output = "../Tests/inverse/100.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 1000;
+    input = "../Arrays/inverse/1000.bin";
+    output = "../Tests/inverse/1000.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 5000;
+    input = "../Arrays/inverse/5000.bin";
+    output = "../Tests/inverse/5000.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 10000;
+    input = "../Arrays/inverse/10000.bin";
+    output = "../Tests/inverse/10000.txt";
+
+    every(type, size, tests, input, output);
+
     size = 20000;
-    tests = 100;
-    input = "../Arrays/random/20000.bin";
-    output = "../Tests/20000.txt";
+    input = "../Arrays/inverse/20000.bin";
+    output = "../Tests/inverse/20000.txt";
 
-    test(type, size, tests, input, output, &bubbleBetter, "Bubble Sort Melhorado");
-    printf("\n\n");
-    test(type, size, tests, input, output, &bubbleWorse, "Bubble Sort Normal");
-    printf("\n\n");
-    test(type, size, tests, input, output, &heapSort, "Heap Sort");
-    printf("\n\n");
-    test(type, size, tests, input, output, &insertionSort, "Insertion Sort");
-    printf("\n\n");
-    test(type, size, tests, input, output, &fachada, "Merge Sort");
-    printf("\n\n");
-    test(type, size, tests, input, output, &fachadaQuickLow, "Quick Sort (inicio)");
-    printf("\n\n");
-    test(type, size, tests, input, output, &fachadaQuickMid, "Quick Sort (meio)");
-    printf("\n\n");
-    test(type, size, tests, input, output, &selectionSort, "Selection Sort");
-    printf("\n\n");
-    test(type, size, tests, input, output, &shellSort, "Shell Sort");
+    every(type, size, tests, input, output);
+
+    size = 50000;
+    input = "../Arrays/inverse/50000.bin";
+    output = "../Tests/inverse/50000.txt";
+
+    every(type, size, tests, input, output);
+
+    size = 100000;
+    input = "../Arrays/inverse/100000.bin";
+    output = "../Tests/inverse/100000.txt";
+
+    every(type, size, tests, input, output);
+
 }

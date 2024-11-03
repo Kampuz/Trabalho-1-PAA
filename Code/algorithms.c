@@ -239,9 +239,9 @@ void quickSortMid(int array[], int low, int high) {
 }
 
 void fachadaQuickMid(int array[], int size) {
-    quickSortMid(array, 0, array[size - 1]);
+    quickSortMid(array, 0, (size - 1));
 }
 
 void fachadaQuickLow(int array[], int size) {
-    quickSortLow(array, 0, array[size - 1]);
+    quickSortLow(array, 0, (size - 1));
 }

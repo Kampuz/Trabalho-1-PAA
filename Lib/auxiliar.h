@@ -9,6 +9,7 @@ double getMedian(int firstIndex, int lastIndex, double array[]);
 
 
 void test(int type, int size, int tests, char *filename, char *filepath, void (*ptr)(int array[], int size), char *functionName);
+void every(int type, int size, int tests, char *input, char *output);
 
 void printToFile(double average, double median, int size, int tests, int type, char *functionName, char *filepath);
 

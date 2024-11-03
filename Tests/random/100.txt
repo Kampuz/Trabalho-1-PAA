@@ -1,0 +1,54 @@
+Função utilizada: Bubble Sort Melhorado
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000020 seconds
+Median time: 0.000020 seconds
+
+
+Função utilizada: Bubble Sort Normal
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000020 seconds
+Median time: 0.000020 seconds
+
+
+Função utilizada: Heap Sort
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000007 seconds
+Median time: 0.000007 seconds
+
+
+Função utilizada: Insertion Sort
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000007 seconds
+Median time: 0.000007 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000005 seconds
+Median time: 0.000005 seconds
+
+
+Função utilizada: Quick Sort (inicio)
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000008 seconds
+Median time: 0.000008 seconds
+
+
+Função utilizada: Quick Sort (meio)
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000004 seconds
+Median time: 0.000003 seconds
+
+
+Função utilizada: Selection Sort
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000014 seconds
+Median time: 0.000013 seconds
+
+
+Função utilizada: Shell Sort
+Teste feito 100 vezes, utilizando um array de 100 elementos desordenados.
+Avarage time: 0.000004 seconds
+Median time: 0.000004 seconds
+
+
