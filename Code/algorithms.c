@@ -9,12 +9,6 @@ void swap(int *left, int *right) {
     *right = temp;
 }
 
-void swapDouble(double *left, double *right) {
-    double temp = *left;
-    *left = *right;
-    *right = temp;
-}
-
 // https://www.geeksforgeeks.org/bubble-sort-algorithm/
 void bubbleBetter(int array[], int n) {
     int i, j;
@@ -37,13 +31,13 @@ void bubbleBetter(int array[], int n) {
 }
 
 // Downgrad of the Bubble Better.
-void bubbleWorse(double array[], int n) {
+void bubbleWorse(int array[], int n) {
     int i, j;
 
     for (i = 0; i < (n - 1); i++)
         for (j = 0; j < (n - i - 1); j++)
             if (array[j] > array[j + 1])
-                swapDouble(&array[j], &array[j + 1]);
+                swap(&array[j], &array[j + 1]);
 }
 
 // https://www.geeksforgeeks.org/heap-sort/
@@ -147,6 +141,10 @@ void mergeSort(int array[], int first, int last) {
     }
 }
 
+void fachada(int array[], int size) {
+    mergeSort(array, 0, (size - 1));
+}
+
 // https://www.geeksforgeeks.org/selection-sort-algorithm-2/
 void selectionSort(int array[], int n) {
     for (int i = 0; i < (n - 1); i++)
@@ -175,4 +173,75 @@ void shellSort(int array[], int n) {
             
             array[j] = temp;
         }
+}
+
+
+int partitionLow(int array[], int low, int high) {
+
+    int pivot = array[low];
+    int i = low;
+    int j = high;
+
+    while (i < j)
+    {
+        while ((array[i] <= pivot) && (i <= (high - 1)))
+            i++;
+        while ((array[j] > pivot) && (j >= (low + 1)))
+            j--;
+        if (i < j)
+            swap(&array[i], &array[j]);
+    }
+
+    swap(&array[i], &array[j]);
+    return j;
+}
+
+void quickSortLow(int array[], int low, int high) {
+    if (low < high)
+    {
+        int pivot = partitionLow(array, low, high);
+
+        quickSortLow(array, low, (pivot - 1));
+        quickSortLow(array, (pivot + 1), high);
+    }
+}
+
+int partitionMid(int array[], int low, int high) {
+
+    int mid = low + (high - low) / 2;
+    int pivot = array[mid];
+    swap(&array[mid], &array[low]);
+    int i = low;
+    int j = high;
+
+    while (i < j)
+    {
+        while ((array[i] <= pivot) && (i <= (high - 1)))
+            i++;
+        while ((array[j] > pivot) && (j >= (low + 1)))
+            j--;
+        if (i < j)
+            swap(&array[i], &array[j]);
+    }
+
+    swap(&array[low], &array[j]);
+    return j;
+}
+
+void quickSortMid(int array[], int low, int high) {
+    if (low < high)
+    {
+        int pivot = partitionMid(array, low, high);
+
+        quickSortMid(array, low, (pivot - 1));
+        quickSortMid(array, (pivot + 1), high);
+    }
+}
+
+void fachadaQuickMid(int array[], int size) {
+    quickSortMid(array, 0, (size - 1));
+}
+
+void fachadaQuickLow(int array[], int size) {
+    quickSortLow(array, 0, (size - 1));
 }

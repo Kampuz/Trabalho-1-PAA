@@ -1,0 +1,54 @@
+Função utilizada: Bubble Sort Melhorado
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000002 seconds
+
+
+Função utilizada: Bubble Sort Normal
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000000 seconds
+
+
+Função utilizada: Heap Sort
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000001 seconds
+
+
+Função utilizada: Insertion Sort
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000001 seconds
+
+
+Função utilizada: Merge Sort
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000002 seconds
+
+
+Função utilizada: Quick Sort (inicio)
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000001 seconds
+
+
+Função utilizada: Quick Sort (meio)
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000001 seconds
+
+
+Função utilizada: Selection Sort
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000001 seconds
+
+
+Função utilizada: Shell Sort
+Teste feito 100 vezes, utilizando um array de 10 elementos ordenados inversamente (n...1).
+Avarage time: 0.000001 seconds
+Median time: 0.000000 seconds
+
+
